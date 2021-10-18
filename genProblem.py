@@ -113,7 +113,7 @@ def printAnswers(problems, printTwoColumns):
 			s = getAnswerString(problem)
 			print(s)
 
-def main(operations, problemsCount, MinAbsNumber, MaxAbsNumber, fractionInput, printTwoColumns):
+def addSub(operations, problemsCount, MinAbsNumber, MaxAbsNumber, fractionInput, printTwoColumns):
 	problems = []
 	inputRange = []
 	if fractionInput: 
@@ -165,13 +165,19 @@ def main(operations, problemsCount, MinAbsNumber, MaxAbsNumber, fractionInput, p
 	print("\n Answer sheet")
 	printAnswers(problems, printTwoColumns)
 
-# 96 for one page text
-# 82 for one google doc page
-problemsCount = 394 # fits on one page in google doc
-MinAbsNumber = -20
-MaxAbsNumber = +20
-# operations = ['add', 'substract', 'multiply', 'divide']
-operations = ['add', 'substract']
-fractionInput = False
-printTwoColumns = True
-main(operations, problemsCount, MinAbsNumber, MaxAbsNumber, fractionInput, printTwoColumns)
+def sampleCall_addSub():
+	# 96 for one page text
+	# 82 for one google doc page
+	problemsCount = 394 # fits on one page in google doc
+	MinAbsNumber = -20
+	MaxAbsNumber = +20
+	# operations = ['add', 'substract', 'multiply', 'divide']
+	operations = ['add', 'substract']
+	fractionInput = False
+	printTwoColumns = True
+	addSub(operations, problemsCount, MinAbsNumber, MaxAbsNumber, fractionInput, printTwoColumns)
+
+def main():
+	sampleCall_addSub()
+
+main()
